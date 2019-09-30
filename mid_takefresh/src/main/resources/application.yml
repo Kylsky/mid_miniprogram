@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: mid_takefresh
+  mvc:
+    async:
+      request-timeout:
+      seconds: 9000000000000
+  datasource:
+    primary:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://119.23.64.10:3306/mid_takefresh?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=UTF-8
+      username: mid_takefresh
+      password: mid413a
+      type: com.alibaba.druid.pool.DruidDataSource
+      # 初始化大小，最小，最大
+      initialSize: 5
+      minIdle: 5
+      maxActive: 100
+      maxWait: 60000
+      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计
+      # 监控统计用的filter:stat日志用的filter:log4j防御sql注入的filter:wall
+      filters: stat
+      # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:1020/eureka
+  instance:
+    instance-id: microservice_mid_admin_2020
+    prefer-ip-address: true
+
+server:
+  port: 2020
+  max-http-header-size: 1048576
+
+logging:
+  level:
+    com.zkky.admin.mapper: debug
+swagger:
+  enable: true
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
