@@ -1,0 +1,6 @@
+com\mid\api\common\CommonResult.class
+com\mid\api\common\ResultCodeEnum.class
+com\mid\api\takefresh\entity\TFAdmin.class
+com\mid\api\takefresh\entity\StudentInfo.class
+com\mid\api\takefresh\entity\ScoreInfo.class
+com\mid\api\takefresh\enums\Direction.class

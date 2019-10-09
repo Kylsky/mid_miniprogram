@@ -12,7 +12,7 @@ import java.util.Date;
 public class StudentInfo {
     @TableId(type = IdType.AUTO)
     private Long id; // 主键ID
-    private String stu_id; // 学号
+    private String phoneNo; // 联系方式
     private String stu_name; // 姓名
     private String prof;//专业
     private String direction; // 学习方向

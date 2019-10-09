@@ -6,15 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mid_api" />
+        <module name="api" />
         <module name="mid_takefresh" />
         <module name="eureka" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mid_api" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api" options="-parameters" />
       <module name="eureka" options="-parameters" />
+      <module name="mid_api" options="-parameters" />
       <module name="mid_takefresh" options="-parameters" />
     </option>
   </component>

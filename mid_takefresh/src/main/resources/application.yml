@@ -1,3 +1,7 @@
+server:
+  port: 2020
+  max-http-header-size: 1048576
+
 spring:
   application:
     name: mid_takefresh
@@ -6,12 +10,11 @@ spring:
       request-timeout:
       seconds: 9000000000000
   datasource:
-    primary:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://119.23.64.10:3306/mid_takefresh?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=UTF-8
       username: mid_takefresh
       password: mid413a
-      type: com.alibaba.druid.pool.DruidDataSource
+#      type: com.alibaba.druid.pool.DruidDataSource
       # 初始化大小，最小，最大
       initialSize: 5
       minIdle: 5
@@ -32,9 +35,7 @@ eureka:
     instance-id: microservice_mid_admin_2020
     prefer-ip-address: true
 
-server:
-  port: 2020
-  max-http-header-size: 1048576
+
 
 logging:
   level:
