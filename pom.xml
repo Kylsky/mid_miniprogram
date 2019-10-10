@@ -49,6 +49,12 @@
                 <scope>import</scope>
             </dependency>
 
+            <!--mybatis plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.0.7</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.baomidou</groupId>
@@ -68,6 +74,12 @@
                 <version>2.1</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>2.1</version>
+            </dependency>
+
             <!-- druid数据源 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -79,7 +91,8 @@
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.16</version>
+                <version>5.1.38</version>
+                <scope>runtime</scope>
             </dependency>
 
             <dependency>

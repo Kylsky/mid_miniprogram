@@ -10,11 +10,11 @@ spring:
       request-timeout:
       seconds: 9000000000000
   datasource:
-      driver-class-name: com.mysql.cj.jdbc.Driver
+      driver-class-name: com.mysql.jdbc.Driver
       url: jdbc:mysql://119.23.64.10:3306/mid_takefresh?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=UTF-8
       username: mid_takefresh
       password: mid413a
-#      type: com.alibaba.druid.pool.DruidDataSource
+      type: com.alibaba.druid.pool.DruidDataSource
       # 初始化大小，最小，最大
       initialSize: 5
       minIdle: 5
@@ -39,10 +39,16 @@ eureka:
 
 logging:
   level:
-    com.zkky.admin.mapper: debug
+    com.mid.takefresh.mapper: debug
 swagger:
   enable: true
 
 ribbon:
   ReadTimeout: 60000
   ConnectTimeout: 60000
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.mid.api.takefresh.entity
+  configuration:
+    map-underscore-to-camel-case: false

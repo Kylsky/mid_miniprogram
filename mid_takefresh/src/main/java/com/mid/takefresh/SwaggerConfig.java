@@ -42,7 +42,7 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("MID纳新模块")
                 .description("MID纳新模块")
-                .termsOfServiceUrl("http://kylecloud.natapp1.cc.com:2020")
+                .termsOfServiceUrl("http://119.23.64.10:2020")
                 .license("")
                 .licenseUrl("")
                 .version("1.0")
